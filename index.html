@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/fonts.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	
+	<link rel="stylesheet" href="assets/css/master.css">
+
+    <title>Hello, world!</title>
+<style>
+
+.site-header .site-branding {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 18px 30px;
+    border-right: 1px solid #e5e5e5;
+}
+.site-header .site-branding .site-logo {
+    display: block;
+    width: 136px;
+    color: #232323 !important;
+    text-decoration: none;
+}
+.site-header .site-branding .site-logo>img {
+    display: block;
+    width: 100%;
+}
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+}
+.site-header .navbar {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+	padding:0;
+}
+.site-header .site-menu {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.site-header .site-menu>ul {
+    display: table;
+    margin: auto;
+}
+.site-header .site-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-header .site-menu>ul>li {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+.site-header .site-menu>ul>li.has-submenu:hover>a, .site-header .site-menu>ul>li.has-megamenu:hover>a {
+    border-color: #e5e5e5;
+    background-color: #fff;
+}
+.site-header .site-menu>ul>li:hover>a {
+    color: #05f;
+}
+.site-header .site-menu>ul>li>a {
+    display: block;
+    position: relative;
+    padding: 20px 18px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    font-size: 15px;
+    font-weight: normal;
+    z-index: 5;
+}
+.site-header .site-menu ul>li>a {
+    transition: all .3s;
+    color: #505050;
+    text-decoration: none;
+}
+
+
+
+.site-header .site-menu>ul>li:hover>.sub-menu {
+    display: block;
+    -webkit-animation: submenu-show .35s;
+    animation: submenu-show .35s;
+}
+.toolbar-dropdown, .site-header .site-menu>ul>li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 10px 0;
+    border: 1px solid #e5e5e5;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #fff;
+    line-height: 1.5;
+    box-shadow: 0 7px 22px -5px rgba(0,0,0,0.2);
+}
+.site-header .site-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toolbar-dropdown>li, .site-header .site-menu>ul>li .sub-menu>li {
+    display: block;
+    position: relative;
+}
+
+.toolbar-dropdown>li>a, .site-header .site-menu>ul>li .sub-menu>li>a {
+    display: block;
+    position: relative;
+    padding: 6px 20px !important;
+    transition: color .3s;
+    color: #505050;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+
+
+
+.toolbar-dropdown>li.has-children>.sub-menu, .site-header .site-menu>ul>li .sub-menu>li.has-children>.sub-menu {
+    top: -11px;
+    left: 100%;
+    margin-left: -4px;
+}
+.toolbar-dropdown, .site-header .site-menu>ul>li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 10px 0;
+    border: 1px solid #e5e5e5;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #fff;
+    line-height: 1.5;
+    box-shadow: 0 7px 22px -5px rgba(0,0,0,0.2);
+}
+
+.toolbar-dropdown>li.has-children:hover>.sub-menu, .site-header .site-menu>ul>li .sub-menu>li.has-children:hover>.sub-menu {
+    display: block;
+    -webkit-animation: submenu-show .35s;
+    animation: submenu-show .35s;
+}
+
+.toolbar-dropdown>li.has-children>a, .site-header .site-menu>ul>li .sub-menu>li.has-children>a {
+    padding-right: 35px !important;
+}
+
+.toolbar-dropdown>li:hover>a, .site-header .site-menu>ul>li .sub-menu>li:hover>a {
+    color: #05f;
+}
+
+.toolbar-dropdown>li.has-children>a::after, .site-header .site-menu>ul>li .sub-menu>li.has-children>a::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    margin-top: -11px;
+	font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f105";
+}
+
+@keyframe submenu-show{
+	0% {
+    opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+.site-header .site-menu>ul>li.has-megamenu {
+    position: static;
+}
+
+.site-header .site-menu>ul>li:hover>.mega-menu {
+    display: table;
+    -webkit-animation: submenu-show .35s;
+    animation: submenu-show .35s;
+}
+.site-header .site-menu>ul>li .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    box-shadow: 0 7px 22px -5px rgba(0,0,0,0.2);
+    table-layout: fixed;
+}
+.site-header .site-menu>ul>li .mega-menu>li:first-child {
+    border-left: 0;
+}
+
+.site-header .site-menu>ul>li:hover>.mega-menu {
+    display: table;
+    -webkit-animation: submenu-show .35s;
+    animation: submenu-show .35s;
+}
+
+
+.site-header .site-menu>ul>li .mega-menu>li {
+    display: table-cell !important;
+    position: relative;
+    padding: 25px !important;
+    border-left: 1px solid #e5e5e5;
+    vertical-align: top;
+}
+.site-header .site-menu>ul>li .mega-menu>li .mega-menu-title {
+    display: block;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #999;
+    text-align: left;
+}
+.site-header .site-menu>ul>li .mega-menu .sub-menu {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 15px;
+    background-color: #f5f5f5;
+    box-shadow: 0 7px 30px -6px rgba(0,0,0,0.15);
+}
+.mobile-menu .mobile-search {
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+.input-group {
+    display: block;
+    position: relative;
+}
+.input-group .input-group-btn {
+    right: 10px;
+}
+.input-group .input-group-btn {
+    margin-top: 3px;
+}
+.input-group .input-group-addon, .input-group .input-group-btn {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: 2px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 1.1em;
+}
+.input-group .input-group-btn ~ .form-control {
+    padding-right: 38px;
+    padding-left: 18px;
+}
+.input-group .form-control {
+    padding-left: 37px;
+}
+.form-control:not(textarea) {
+    height: 46px;
+}
+
+.form-control {
+    display: block;
+    width: 100% !important;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+
+
+
+.mobile-menu .toolbar {
+    display: table;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.site-header .toolbar {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.site-header .toolbar .toolbar-item {
+    width: 75px;
+}
+.mobile-menu .toolbar .toolbar-item {
+    display: table-cell;
+    height: 75px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    vertical-align: middle;
+}
+.site-header .toolbar .toolbar-item {
+    position: relative;
+    width: 96px;
+    transition: background-color .3s;
+    border-left: 1px solid #e5e5e5;
+}
+.site-header .toolbar .toolbar-item>a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: #505050;
+    text-align: center;
+    text-decoration: none;
+}
+.site-header .toolbar .toolbar-item>a>div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+.site-header .toolbar .toolbar-item .flag-icon {
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.site-header .toolbar .toolbar-item>a>div>.text-label {
+    display: block;
+    font-size: 12px;
+}
+
+.slideable-menu {
+    position: relative;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+    overflow: hidden;
+}
+.slideable-menu .menu {
+    display: block;
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.slideable-menu ul {
+    margin: 0;
+    padding: 0;
+}
+.slideable-menu .menu li {
+    display: block;
+}
+.slideable-menu .menu li.has-children>span {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.slideable-menu .menu li a {
+    display: block;
+    padding: 13px 20px;
+    transition: color .3s;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 2px solid transparent;
+    color: #505050;
+    font-size: 16px;
+    letter-spacing: .025em;
+    text-decoration: none;
+}
+.slideable-menu .menu li.active>a, .slideable-menu .menu li.active>span>a {
+    border-left-color: #05f;
+    color: #05f;
+}
+.slideable-menu .menu li.has-children .sub-menu-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    height: calc(100% - 1px);
+    transition: background-color .3s;
+    border-left: 1px solid #e5e5e5;
+    color: #505050 !important;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slideable-menu .menu.off-view {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.slideable-menu .menu li.has-children .slideable-submenu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: auto;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+.slideable-menu .menu li.back-btn>a {
+    background-color: #f5f5f5;
+}
+
+.slideable-menu .menu li.has-children .slideable-submenu.in-view {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+.slideable-menu .menu li.has-children .slideable-submenu.off-view {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+
+.mobile-menu.open {
+		display: block;
+	}
+@media (max-width: 991px){
+	.navbar, .search-box-wrap, .hidden-on-mobile {
+		display: none !important;
+	}
+	
+}
+
+
+.w-150 {
+    width: 150px !important;
+}
+
+.owl-carousel .owl-item .from-top, .owl-carousel .owl-item .from-bottom, .owl-carousel .owl-item .from-left, .owl-carousel .owl-item .from-right, .owl-carousel .owl-item .scale-up, .owl-carousel .owl-item .scale-down {
+    transition: all .45s .3s ease-in-out;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.owl-carousel .owl-item .from-bottom {
+    -webkit-transform: translateY(45px);
+    -ms-transform: translateY(45px);
+    transform: translateY(45px);
+}
+.owl-carousel .owl-item.active .from-top, .owl-carousel .owl-item.active .from-bottom {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+.padding-top-3x {
+    padding-top: 72px !important;
+}
+
+.hero-slider {
+    width: 100%;
+    min-height: 580px;
+    background-position: center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 7px 30px -6px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+<header class="site-header navbar-sticky">
+
+<div class="topbar d-flex justify-content-between">
+        <!-- Logo-->
+        <div class="site-branding d-flex"><a class="site-logo align-self-center" href="index.html"><img src="assets/images/logo.png" alt="LOGO"></a></div>
+      
+        <!-- Toolbar-->
+			<div class="toolbar d-flex">
+			  <div class="toolbar-item visible-on-mobile mobile-menu-toggle">
+			  <!-- <a href="#"><div><i class="icon-menu"></i><span class="text-label">Menu</span></div></a> -->
+			  <div><i class="icon-menu"></i><span class="text-label">Menu</span></div>
+			  </div>
+			</div>
+        <!-- Mobile Menu-->
+        <div class="mobile-menu">
+          <!-- Search Box-->
+          <div class="mobile-search">
+            <form class="input-group" method="get"><span class="input-group-btn">
+                <button type="submit"><i class="icon-search"></i></button></span>
+              <input class="form-control" type="search" placeholder="Search site">
+            </form>
+          </div>
+          <!-- Toolbar-->
+          <div class="toolbar">
+            <div class="toolbar-item"><a href="#">
+                <div><i class="flag-icon"><img class="img-fluid" src="assets/images/EN.png" alt="English"></i><span class="text-label">Eng / Usd</span></div></a>
+              <ul class="toolbar-dropdown lang-dropdown w-100">
+                <li class="px-3 pt-1 pb-2">
+                  <select class="form-control form-control-sm">
+                    <option value="usd">$ USD</option>
+                    <option value="usd">€ EUR</option>
+                    <option value="usd">£ UKP</option>
+                    <option value="usd">¥ JPY</option>
+                  </select>
+                </li>
+                <li><a href="#"><i class="flag-icon"><img src="img/flags/FR.png" alt="Français"></i>&nbsp;Français</a></li>
+                <li><a href="#"><i class="flag-icon"><img src="img/flags/DE.png" alt="Deutsch"></i>&nbsp;Deutsch</a></li>
+                <li><a href="#"><i class="flag-icon"><img src="img/flags/IT.png" alt="Italiano"></i>&nbsp;Italiano</a></li>
+              </ul>
+            </div>
+            <div class="toolbar-item"><a href="product-comparison.html">
+                <div><span class="compare-icon"><i class="icon-repeat"></i><span class="count-label">3</span></span><span class="text-label">Compare</span></div></a></div>
+            <div class="toolbar-item"><a href="account-login.html">
+                <div><i class="icon-user"></i><span class="text-label">Sign In / Up</span></div></a></div>
+          </div>
+          <!-- Slideable (Mobile) Menu-->
+          <nav class="slideable-menu">
+            <ul class="menu" data-initial-height="385">
+              <li class="has-children"><span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                    <li><a href="index.html">Hero Slider</a></li>
+                    <li><a href="home-featured-categories.html">Categories Grid</a></li>
+                </ul>
+              </li>
+              <li class="has-children"><span><a href="shop-grid-ls.html">Shop</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                  <li><a href="shop-categories.html">Shop Categories</a></li>
+                  <li class="has-children"><span><a href="shop-grid-ls.html">Shop Grid</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="slideable-submenu">
+                        <li><a href="shop-grid-ls.html">Grid Left Sidebar</a>
+						
+							 <li class="has-children"><span><a href="shop-grid-ls.html">third</a><span class="sub-menu-toggle"></span></span>
+								<ul class="slideable-submenu">
+									<li><a href="shop-grid-ls.html">third Grid </a></li>
+									<li><a href="shop-grid-rs.html">third Sidebar</a>
+									
+										<li class="has-children"><span><a href="shop-grid-ls.html">fourth</a><span class="sub-menu-toggle"></span></span>
+											<ul class="slideable-submenu">
+												<li><a href="shop-grid-ls.html">fourth Grid </a></li>
+												<li><a href="shop-grid-rs.html">fourth Sidebar</a></li>
+												<li><a href="shop-grid-ns.html">fourth Sidebar</a></li>
+											</ul>
+										  </li>
+									
+									</li>
+									<li><a href="shop-grid-ns.html">third Sidebar</a></li>
+								</ul>
+							  </li>
+						
+						
+						
+						</li>
+                        <li><a href="shop-grid-rs.html">Grid Right Sidebar</a></li>
+                        <li><a href="shop-grid-ns.html">Grid No Sidebar</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><span><a href="shop-list-ls.html">Shop List</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="slideable-submenu">
+                        <li><a href="shop-list-ls.html">List Left Sidebar</a></li>
+                        <li><a href="shop-list-rs.html">List Right Sidebar</a></li>
+                        <li><a href="shop-list-ns.html">List No Sidebar</a></li>
+                    </ul>
+                  </li>
+                    <li><a href="shop-single.html">Single Product</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                  <li class="has-children"><span><a href="checkout-address.html">Checkout</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="slideable-submenu">
+                        <li><a href="checkout-address.html">Address</a></li>
+                        <li><a href="checkout-shipping.html">Shipping</a></li>
+                        <li><a href="checkout-payment.html">Payment</a></li>
+                        <li><a href="checkout-review.html">Review</a></li>
+                        <li><a href="checkout-complete.html">Complete</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-children"><span><a href="#">Categories</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                  <li><a href="#">Computers &amp; Accessories</a></li>
+                  <li><a href="#">Smartphones &amp; Tablets</a></li>
+                  <li><a href="#">TV, Video &amp; Audio</a></li>
+                  <li><a href="#">Cameras, Photo &amp; Video</a></li>
+                  <li><a href="#">Headphones</a></li>
+                  <li><a href="#">Wearable Electronics</a></li>
+                  <li><a href="#">Printers &amp; Ink</a></li>
+                  <li><a href="#">Video Games</a></li>
+                </ul>
+              </li>
+              <li class="has-children"><span><a href="account-orders.html">Account</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                    <li class="active"><a href="account-login.html">Login / Register</a></li>
+                    <li><a href="account-password-recovery.html">Password Recovery</a></li>
+                    <li><a href="account-orders.html">Orders List</a></li>
+                    <li><a href="account-wishlist.html">Wishlist</a></li>
+                    <li><a href="account-profile.html">Profile Page</a></li>
+                    <li><a href="account-address.html">Contact / Shipping Address</a></li>
+                    <li><a href="account-open-ticket.html">Open Ticket</a></li>
+                    <li><a href="account-tickets.html">My Tickets</a></li>
+                    <li><a href="account-single-ticket.html">Single Ticket</a></li>
+                </ul>
+              </li>
+              <li class="has-children"><span><a href="blog-rs.html">Blog</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                  <li class="has-children"><span><a href="blog-rs.html">Blog Layout</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="slideable-submenu">
+                        <li><a href="blog-rs.html">Blog Right Sidebar</a></li>
+                        <li><a href="blog-ls.html">Blog Left Sidebar</a></li>
+                        <li><a href="blog-ns.html">Blog No Sidebar</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><span><a href="blog-single-rs.html">Single Post Layout</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="slideable-submenu">
+                        <li><a href="blog-single-rs.html">Post Right Sidebar</a></li>
+                        <li><a href="blog-single-ls.html">Post Left Sidebar</a></li>
+                        <li><a href="blog-single-ns.html">Post No Sidebar</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-children"><span><a href="#">Pages</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="faq.html">Help / FAQ</a></li>
+                    <li><a href="product-comparison.html">Product Comparison</a></li>
+                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                    <li><a href="search-results.html">Search Results</a></li>
+                    <li><a href="404.html">404 Not Found</a></li>
+                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                  <li><a class="text-danger" href="docs/dev-setup.html">Documentation</a></li>
+                </ul>
+              </li>
+              <li class="has-children"><span><a href="components/accordion.html">Components</a><span class="sub-menu-toggle"></span></span>
+                <ul class="slideable-submenu">
+                    <li><a href="components/accordion.html">Accordion</a></li>
+                    <li><a href="components/alerts.html">Alerts</a></li>
+                    <li><a href="components/buttons.html">Buttons</a></li>
+                    <li><a href="components/cards.html">Cards</a></li>
+                    <li><a href="components/carousel.html">Carousel</a></li>
+                    <li><a href="components/countdown.html">Countdown</a></li>
+                    <li><a href="components/forms.html">Forms</a></li>
+                    <li><a href="components/gallery.html">Gallery</a></li>
+                    <li><a href="components/google-maps.html">Google Maps</a></li>
+                    <li><a href="components/images.html">Images &amp; Figures</a></li>
+                    <li><a href="components/list-group.html">List Group</a></li>
+                    <li><a href="components/market-social-buttons.html">Market &amp; Social Buttons</a></li>
+                    <li><a href="components/media.html">Media Object</a></li>
+                    <li><a href="components/modal.html">Modal</a></li>
+                    <li><a href="components/pagination.html">Pagination</a></li>
+                    <li><a href="components/pills.html">Pills</a></li>
+                    <li><a href="components/progress-bars.html">Progress Bars</a></li>
+                    <li><a href="components/shop-items.html">Shop Items</a></li>
+                    <li><a href="components/steps.html">Steps</a></li>
+                    <li><a href="components/tables.html">Tables</a></li>
+                    <li><a href="components/tabs.html">Tabs</a></li>
+                    <li><a href="components/team.html">Team</a></li>
+                    <li><a href="components/toasts.html">Toast Notifications</a></li>
+                    <li><a href="components/tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
+                    <li><a href="components/typography.html">Typography</a></li>
+                    <li><a href="components/video-player.html">Video Player</a></li>
+                    <li><a href="components/widgets.html">Widgets</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+
+		
+		
+		
+	<div class="navbar">
+		<nav class="site-menu">
+			<ul>
+				<li class="has-submenu"><a href="blog-rs.html">Blog</a>
+				  <ul class="sub-menu">
+					<li class="has-children"><a href="blog-rs.html">Blog Layout </a>
+					  <ul class="sub-menu">
+						  <li><a href="blog-rs.html">Blog Right Sidebar</a></li>
+						  <li><a href="blog-ls.html">Blog Left Sidebar</a></li>
+						  <li><a href="blog-ns.html">Blog No Sidebar</a></li>
+					  </ul>
+					</li>
+					<li class="has-children"><a href="blog-single-rs.html">Single Post Layout</a>
+					  <ul class="sub-menu">
+						  <li><a href="blog-single-rs.html">Post Right Sidebar</a></li>
+						  <li><a href="blog-single-ls.html">Post Left Sidebar</a></li>
+						  <li><a href="blog-single-ns.html">Post No Sidebar</a></li>
+					  </ul>
+					</li>
+				  </ul>
+				</li>
+
+<li class="has-megamenu"><a href="#">Mega Menu</a>
+              <ul class="mega-menu">
+                <li><span class="mega-menu-title">Top Categories</span>
+                  <ul class="sub-menu">
+                    <li><a href="#">Computers &amp; Accessories</a></li>
+                    <li><a href="#">Smartphones &amp; Tablets</a></li>
+                    <li><a href="#">TV, Video &amp; Audio</a></li>
+                    <li><a href="#">Cameras, Photo &amp; Video</a></li>
+                    <li><a href="#">Headphones</a></li>
+                    <li><a href="#">Wearable Electronics</a></li>
+                    <li><a href="#">Printers &amp; Ink</a></li>
+                    <li><a href="#">Video Games</a></li>
+                  </ul>
+                </li>
+                <li><span class="mega-menu-title">Popular Brands</span>
+                  <ul class="sub-menu">
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Canon Inc.</a></li>
+                    <li><a href="#">Hewlett-Packard</a></li>
+                    <li><a href="#">Lenovo</a></li>
+                    <li><a href="#">Panasonic</a></li>
+                    <li><a href="#">Samsung Electronics</a></li>
+                    <li><a href="#">Sony</a></li>
+                    <li><a href="#">Toshiba</a></li>
+                  </ul>
+                </li>
+                <li><span class="mega-menu-title">Store Locator</span>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <ul class="list-icon">
+                        <li> <i class="icon-map-pin text-muted"></i>514 S. Magnolia St. Orlando, FL 32806, USA</li>
+                        <li> <i class="icon-phone text-muted"></i>+1 (786) 322 560 40</li>
+                        <li class="mb-0"><i class="icon-mail text-muted"></i><a class="navi-link" href="mailto:orlando.store@unishop.com">orlando.store@unishop.com</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <ul class="list-icon">
+                        <li> <i class="icon-map-pin text-muted"></i>44 Shirley Ave. West Chicago, IL 60185, USA</li>
+                        <li> <i class="icon-phone text-muted"></i>+1 (847) 252 765 33</li>
+                        <li class="mb-0"><i class="icon-mail text-muted"></i><a class="navi-link" href="mailto:chicago.store@unishop.comm">chicago.store@unishop.com</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="card border-0 bg-secondary rounded-0" href="shop-grid-ls.html"><img class="d-block mx-auto img-fluid" alt="Samsung Galaxy S9" src="assets/images/mega-menu.jpg"></a></li>
+              </ul>
+            </li>				
+			</ul>
+		</nav>
+	</div>
+
+
+
+
+
+
+		
+</header>		
+
+
+<section class="hero-slider" style="background-image: url(assets/images/main-bg.jpg);">
+		<div class="fadeOut owl-carousel owl-theme">
+            <div class="item">
+				<div class="container padding-top-3x">
+					<div class="row justify-content-center align-items-center">
+					  <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+						<div class="from-bottom"><img class="d-inline-block w-150 mb-3" src="assets/images/logo03.png" alt="Motorola">
+						  <div class="h2 text-body mb-2 pt-1">Beats Studio by Dr.Dre</div>
+						  <div class="h2 text-body mb-4 pb-1">for only <span class="text-medium">$349.50</span></div>
+						</div><a class="btn btn-primary scale-up delay-1" href="shop-single.html">Shop Now&nbsp;<i class="icon-arrow-right"></i></a>
+					  </div>
+					  <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="assets/images/03.png" alt="Moto 360"></div>
+					</div>
+				</div>
+            </div>
+            <div class="item">
+              <div class="container padding-top-3x">
+				<div class="row justify-content-center align-items-center">
+				  <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+					<div class="from-bottom"><img class="d-inline-block w-150 mb-4" src="assets/images/logo02.png" alt="Puma">
+					  <div class="h2 text-body mb-2 pt-1">Google Home - Smart Speaker</div>
+					  <div class="h2 text-body mb-4 pb-1">starting at <span class="text-medium">$129.00</span></div>
+					</div><a class="btn btn-primary scale-up delay-1" href="shop-grid-ls.html">View Offers&nbsp;<i class="icon-arrow-right"></i></a>
+				  </div>
+				  <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="assets/images/02.png" alt="Puma Backpack"></div>
+				</div>
+			  </div>
+            </div>
+            <div class="item">
+				 <div class="container padding-top-3x">
+					<div class="row justify-content-center align-items-center">
+					  <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+						<div class="from-bottom"><img class="d-inline-block w-150 mb-3" src="assets/images/logo01.png" alt="Sony">
+						  <div class="h2 text-body mb-2 pt-1">Modern Powerful Laptop</div>
+						  <div class="h2 text-body mb-4 pb-1">for only <span class="text-medium">$1,459.99</span></div>
+						</div><a class="btn btn-primary scale-up delay-1" href="shop-single.html">Shop Now&nbsp;<i class="icon-arrow-right"></i></a>
+					  </div>
+					  <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="assets/images/01.png" alt="Chuck Taylor All Star II"></div>
+					</div>
+				  </div>
+            </div>
+          </div>
+	</section>
+	
+	
+	
+	
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+  $('.fadeOut').owlCarousel({
+	items: 1,
+	animateOut: 'fadeOut',
+	loop: true,
+	margin: 10,
+  });
+  $('.custom1').owlCarousel({
+	animateOut: 'slideOutDown',
+	animateIn: 'flipInX',
+	items: 1,
+	margin: 30,
+	stagePadding: 30,
+	smartSpeed: 450
+  });
+});
+
+$(".mobile-menu-toggle").on("click", function(){
+	//alert("prem")
+	$(".mobile-menu").toggleClass("open");
+	
+});
+
+
+
+$(".slideable-menu .slideable-submenu").each(function() {
+   $(this).prepend('<li class="back-btn"><a href="javascript:void(0)">Back</a></li>')
+});
+
+
+
+$("li.has-children").on("click", function(e){
+	$(this).parents('.menu').addClass("off-view");
+	$(this).children('ul').addClass("in-view");
+	$(".slideable-menu .menu").attr("data-initial-height");
+	e.stopPropagation();				
+});
+
+$(".sub-menu-toggle").on("click", function(e){
+	$(this).parent().parent().siblings().parent().addClass('off-view');	
+	$(this).parents("li").children("ul").addClass("in-view");
+	e.stopPropagation();	
+});
+
+$(".back-btn").on("click", function(e){
+	$(this).parent().parent().siblings().parent().removeClass('off-view');
+	$(this).parent().removeClass("in-view");
+	$(".slideable-menu .menu").attr("data-initial-height");
+	e.stopPropagation();				
+});
+
+
+
+
+
+
+//$(".nav-item").mouseover(function(){
+    //$(this).addClass("show");
+//});
+
+//$(".nav-item").mouseleave(function(){
+    //$(this).removeClass("show");
+//});
+
+</script>
+  </body>
+</html>
